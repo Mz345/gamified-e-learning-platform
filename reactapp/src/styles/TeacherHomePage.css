@@ -1,0 +1,165 @@
+/* Base layout wrapper (assumes sidebar is outside or sibling) */
+.home-wrapper {
+  min-height: 100vh;
+  margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #201f1f;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Page container next to sidebar */
+.page-container {
+  flex: 1;
+  margin-left: 1%; /* leave space for sidebar */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem 2rem;
+}
+
+/* Floating logo inside main content */
+.floating-logo {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #4fc3f7;
+  z-index: 10;
+}
+
+/* Header similar to your original */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(29, 28, 68, 0.226);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 15px rgba(3, 3, 3, 0.452);
+  margin-right: 130px; /* space for floating logo */
+  color: #eee;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Header right (can add buttons here) */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Main teacher home content */
+.teacher-home-container {
+  flex: 1;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0;
+}
+
+/* Cards container */
+.cards-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Individual cards with glassmorphism */
+.teacher-card {
+  flex: 1 1 45%; /* flexible with a base of 45% of the container */
+  max-width: 600px; /* optional max width */
+  min-width: 300px; /* optional min width */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #eee;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(79, 195, 247, 0.6);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 200px;
+}
+
+.teacher-card:hover {
+  background: rgba(79, 195, 247, 0.3);
+  box-shadow: 0 0 25px #29b6f6;
+  transform: translateY(-8px) scale(1.05);
+}
+
+/* Card icons */
+.teacher-card .t-icon {
+  font-size: 10rem;
+  margin-bottom: 1rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Footer styling - consistent with your original footer */
+.footer {
+  background: linear-gradient(135deg, #1e1e2f, #121212);
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.7);
+  padding: 2.5rem 2rem;
+  color: #bbb;
+  font-size: 0.95rem;
+  border-top: 2px solid #4fc3f7;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 1%; /* align footer with content */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+  .page-container {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .teacher-home-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 100%;
+  }
+
+  .teacher-card {
+    flex-basis: 100%;
+    min-height: 160px;
+  }
+
+  .footer {
+    margin-left: 0;
+  }
+}

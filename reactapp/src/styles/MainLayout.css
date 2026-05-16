@@ -1,0 +1,25 @@
+
+  
+  .divider {
+    width: 2px;
+    background-color: #4fc3f7;
+    box-shadow: 0 0 5px #4fc3f7;
+  }
+  
+  
+  .main-layout {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .page-content {
+    margin-left: 260px; /* matches the fixed sidebar width */
+    padding: 2rem;
+    background-color: #121212;
+    color: white;
+    overflow-y: auto;
+    flex: 1; /* take remaining width */
+  }
+  
+  

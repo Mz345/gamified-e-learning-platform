@@ -1,0 +1,91 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(145deg, #0d1117, #161b22);
+  border-right: 2px solid #58a6ff;
+  padding: 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  color: #c9d1d9;
+  z-index: 100;
+  box-shadow: 5px 0 20px rgba(24, 27, 31, 0.9);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  user-select: none;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #58a6ff;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 12px #58a6ffaa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.profile-img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 18px #58a6ffcc;
+}
+
+.profile-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0.3rem 0;
+  background: linear-gradient(90deg, #58a6ff, #1f6feb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: text;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.sidebar-menu li {
+  margin: 1.4rem 0;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: #c9d1d9;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.9rem 1.2rem;
+  display: block;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 0 transparent;
+}
+
+.sidebar-menu a:hover {
+  background: rgba(88, 166, 255, 0.15);
+  padding-left: 1.8rem;
+  color: #58a6ff;
+  box-shadow: inset 4px 0 10px #58a6ff;
+}
+
+.sidebar-menu .active-link {
+  background: rgba(88, 166, 255, 0.3);
+  color: #58a6ff;
+  font-weight: 700;
+  border-radius: 12px;
+  padding-left: 1.5rem;
+  box-shadow: inset 4px 0 15px #58a6ff;
+}

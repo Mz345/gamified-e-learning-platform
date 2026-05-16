@@ -1,0 +1,217 @@
+/* Layout base */
+.home-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.page-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Floating logo */
+.floating-logo {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #4fc3f7;
+  z-index: 10;
+}
+
+/* Header */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-right: 130px; /* Leave space for floating logo */
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.leaderboard-btn {
+  background-color: #5c6b72;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 1000;
+  font-size: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.leaderboard-btn:hover {
+  background-color: #29b6f6;
+}
+
+/* Main content container */
+.home-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+/* Subjects */
+.subjects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.subject-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: transform 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.subject-card:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-5px);
+}
+
+.subject-icon {
+  font-size: 12.5rem;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+/* Base footer style (used in dark mode) */
+.footer {
+  background: linear-gradient(135deg, #1e1e2f, #121212);
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.7);
+  padding: 2.5rem 2rem;
+  color: #bbb;
+  font-size: 0.95rem;
+  border-top: 2px solid #4fc3f7;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left h3 {
+  margin-bottom: 0.75rem;
+  color: #4fc3f7;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.footer-left p {
+  line-height: 1.6;
+  color: #ccc;
+  max-width: 400px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-right ul li {
+  margin-bottom: 0.7rem;
+}
+
+.footer-right ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-right ul li a:hover {
+  color: #4fc3f7;
+  border-bottom: 1px solid #4fc3f7;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+/* Light theme footer override */
+body.light .footer {
+  background: linear-gradient(135deg, #f5f7fa, #e4e7eb);
+  box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+  color: #444;
+  border-top: 2px solid #0288d1;
+}
+
+body.light .footer-left h3 {
+  color: #0288d1;
+}
+
+body.light .footer-left p {
+  color: #555;
+}
+
+body.light .footer-right ul li a {
+  color: #555;
+}
+
+body.light .footer-right ul li a:hover {
+  color: #0288d1;
+  border-bottom: 1px solid #0288d1;
+}
+
+body.light .footer-bottom {
+  color: #666;
+}
+
+/* Theme support */
+body.light {
+  background-color: #fefefe;
+  color: #222;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+/* Dark mode specific styles */
+body.dark .home-header {
+  background: rgba(18, 18, 18, 0.8);
+  color: #fff;
+}

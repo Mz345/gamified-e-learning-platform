@@ -1,0 +1,119 @@
+.settings-page {
+  max-width: 600px;
+  margin: 60px auto;
+  background: linear-gradient(135deg, rgba(20, 28, 48, 0.85), rgba(14, 20, 35, 0.85));
+  backdrop-filter: blur(22px);
+  border-radius: 28px;
+  padding: 50px 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+  color: #e3e8ff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1.5px solid rgba(70, 130, 255, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+.settings-page:hover {
+  box-shadow: 0 25px 80px rgba(70, 130, 255, 0.7);
+}
+
+.settings-page h2 {
+  font-size: 2.6rem;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #5ea0ff;
+  text-shadow: 0 0 8px #5ea0ffcc;
+  user-select: none;
+}
+
+.setting-section {
+  margin-bottom: 36px;
+}
+
+.setting-section label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #a1b0d6;
+  user-select: none;
+  letter-spacing: 0.03em;
+}
+
+.setting-section input[type="text"],
+.setting-section input[type="file"] {
+  width: 100%;
+  padding: 16px 22px;
+  border: none;
+  border-radius: 18px;
+  background: rgba(35, 45, 75, 0.85);
+  color: #d6dfff;
+  font-size: 1.15rem;
+  outline: none;
+  box-shadow: inset 0 0 15px rgba(94, 160, 255, 0.4);
+  transition: box-shadow 0.4s ease, background 0.4s ease;
+  cursor: pointer;
+}
+
+.setting-section input[type="text"]:focus {
+  box-shadow: 0 0 16px #5ea0ffcc;
+  background: rgba(42, 55, 95, 1);
+  color: #fff;
+}
+
+.setting-section input[type="file"] {
+  cursor: pointer;
+  padding: 12px 18px;
+}
+
+.logout-btn {
+  margin-top: 42px;
+  padding: 16px 36px;
+  background: #e04242;
+  border: none;
+  color: white;
+  font-weight: 800;
+  font-size: 1.3rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 28px rgba(224, 66, 66, 0.85);
+  transition: background 0.45s ease, transform 0.25s ease;
+  display: block;
+  width: 100%;
+  user-select: none;
+  text-shadow: 0 0 6px #7f1a1a;
+}
+
+.logout-btn:hover {
+  background: #b82828;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(184, 40, 40, 1);
+}
+
+.settings-page p {
+  margin-top: 15px;
+  font-size: 1.05rem;
+  color: #99a9d9;
+  user-select: none;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .settings-page {
+    margin: 30px 18px;
+    padding: 35px 28px;
+  }
+
+  .settings-page h2 {
+    font-size: 2rem;
+  }
+
+  .save-btn,
+  .logout-btn {
+    font-size: 1.1rem;
+    padding: 14px 28px;
+  }
+}

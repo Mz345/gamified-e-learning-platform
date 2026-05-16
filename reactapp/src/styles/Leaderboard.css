@@ -1,0 +1,65 @@
+.leaderboard-container {
+  padding: 2rem;
+  color: #fff;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.range-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.range-buttons button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.range-buttons button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-buttons button.active {
+  background: #ffffff;
+  color: #000000;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.leaderboard-table th {
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.leaderboard-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.leaderboard-table tr:hover {
+  background: rgba(255, 255, 255, 0.15);
+}

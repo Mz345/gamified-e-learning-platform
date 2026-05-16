@@ -1,0 +1,135 @@
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px; /* bigger container */
+  background: linear-gradient(to right, #6f7a6f, #f7f6f6, #666161);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 25px;
+  border-radius: 50%;
+}
+
+.main-title {
+  font-size: 44px;
+  font-weight: bold;
+  color: #222;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+}
+
+.highlight {
+  background: linear-gradient(to right, #8e2de2, #4a00e0, #00c6ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #555;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.features {
+  margin: 40px 0 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Spread them out: left, center, right */
+  padding: 0 50px;
+}
+
+.feature-line {
+  width: 30%;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center scroll text in each line */
+}
+
+.w-site-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #4b0082;
+  margin-bottom: 20px;
+  margin-top: -200px; /* Move it slightly upward */
+  letter-spacing: 1px;
+}
+
+
+
+.scroll {
+  position: absolute;
+  white-space: nowrap;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  top: 0;
+}
+
+/* Left-to-right infinite scroll */
+.scroll-left {
+  animation: moveLeftToRight 7s linear infinite;
+}
+
+/* Right-to-left infinite scroll */
+.scroll-right {
+  animation: moveRightToLeft 7s linear infinite;
+}
+
+/* Optional delays to stagger the animations */
+.delay-0 {
+  animation-delay: 1s;
+}
+.delay-1 {
+  animation-delay: 2s;
+}
+.delay-2 {
+  animation-delay: 4s;
+}
+
+/* Keyframes for continuous movement */
+@keyframes moveLeftToRight {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes moveRightToLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.start-btn {
+  background: #6a0dad;
+  color: white;
+  padding: 18px 36px; /* bigger button */
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Added shadow transition */
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.start-btn:hover {
+  background: #4b0082;
+  transform: scale(1.08);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Added shadow effect on hover */
+}

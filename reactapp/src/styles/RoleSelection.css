@@ -1,0 +1,171 @@
+:root {
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --neutral-medium: #6c757d;
+  --primary-color: #007bff;
+  --primary-hover: #0056b3;
+  --card-bg: #ffffffcc; /* glass effect */
+  --card-hover-bg: #f0f8ff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.role-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #030b30 0%, #231261 50%, #581cc7 100%);
+  padding: var(--spacing-lg);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+
+.site-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-sm);
+  margin-top: 100px;
+  color: #343a40;
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.logo {
+  width: 100px;
+  margin: 0 auto var(--spacing-lg);
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px var(--card-shadow);
+}
+
+.role-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.role-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--neutral-medium);
+  margin-bottom: var(--spacing-xl);
+}
+
+.role-cards {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.role-card {
+  background-color: var(--card-bg); /* semi-transparent */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: var(--spacing-lg);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 12px 30px var(--card-shadow);
+  cursor: pointer;
+}
+
+
+
+.role-card:hover {
+  background-color: var(--card-hover-bg);
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.role-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.role-card p {
+  color: var(--neutral-medium);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.role-card button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.role-card button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Fade animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.role-card.teacher {
+  background-color: #f5e8ff; /* light purple background */
+  border-left: 5px solid #9b59b6; /* purple border */
+}
+
+.role-card.teacher button {
+  background-color: #9b59b6; /* purple */
+}
+
+.role-card.teacher button:hover {
+  background-color: #7e3e9f;
+}
+
+.role-card.student {
+  background-color: #e6f0ff; /* light blue background */
+  border-left: 5px solid #3498db; /* blue border */
+}
+
+.role-card.student button {
+  background-color: #3498db; /* blue */
+}
+
+.role-card.student button:hover {
+  background-color: #216fa0;
+}
+
+
+@media (max-width: 768px) {
+  .role-title {
+    font-size: 2rem;
+  }
+
+  .role-subtitle {
+    font-size: 1rem;
+  }
+
+  .role-cards {
+    gap: var(--spacing-lg);
+  }
+
+  .role-card {
+    width: 90%;
+  }
+}
