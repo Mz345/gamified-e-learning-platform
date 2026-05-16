@@ -1,6 +1,7 @@
 # Dependencies
 /node_modules
 /backend/node_modules
+/reactapp/node_modules
 
 # PNP
 /.pnp
